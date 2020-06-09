@@ -508,9 +508,10 @@ begin
   if Len = 0 then
     Exit;
 
-  Last := Hash[Len -1].ToLower;
+  //Last := Hash[Len -1].ToLower;
+  Last := Hash[Len].ToLower;
 
-  Idx := NativeInt(Direction) * 2 + (Len mod 2);
+  Idx := (NativeInt(Direction) * 2 )+ (Len mod 2);
 
   Result := Copy(Hash, 1, Len -1);
 
